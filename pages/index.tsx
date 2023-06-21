@@ -1,16 +1,37 @@
 import Head from "next/head";
 
 export default function Home() {
+  const writeToFile = () => {};
+
   return (
     <>
       <Head>
         <title>Arduino Interaction</title>
       </Head>
 
-      <main className="flex w-max">
-        <section className="flex justify-around">
-          <button> Useless </button>
-        </section>
+      <main className="flex flex-row justify-center">
+        <div className="flex">
+          <button
+            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-green-600 active:bg-green-100"
+            onClick={writeToFile}
+          >
+            <label className="p-4 font-bold"> Green </label>
+          </button>
+
+          <button
+            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-yellow-600 active:bg-yellow-100"
+            onClick={writeToFile}
+          >
+            <label className="p-4 font-bold"> Yellow </label>
+          </button>
+
+          <button
+            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-red-600 active:bg-red-100"
+            onClick={writeToFile}
+          >
+            <label className="p-4 font-bold"> Red </label>
+          </button>
+        </div>
       </main>
     </>
   );

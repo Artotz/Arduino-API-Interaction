@@ -1,13 +1,24 @@
+import fs from "fs";
+import path from "path";
+
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
+const filePath = path.resolve("../../data/storage.json");
+
 type Data = {
-  name: string;
+  message: string;
 };
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  res.status(200).json({ name: "John Doe" });
+  if (req.method === "GET") {
+    res.status(200).json({ message: "This is a GET request" });
+  } else if (req.method === "POST") {
+    res.status(200).json({ message: "This is a POST request" });
+  } else {
+    res.status(405).json({ message: "Method Not Allowed" });
+  }
 }
