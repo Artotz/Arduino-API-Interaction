@@ -9,30 +9,36 @@ export default function Home() {
         <title>Arduino Interaction</title>
       </Head>
 
-      <main className="flex flex-row justify-center">
-        <div className="flex">
-          <button
-            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-green-600 active:bg-green-100"
-            onClick={writeToFile}
-          >
-            <label className="p-4 font-bold"> Green </label>
-          </button>
+      <section className="fixed flex h-16 left-2 right-2 top-2 justify-center bg-slate-100 border-2 border-black"></section>
 
-          <button
-            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-yellow-600 active:bg-yellow-100"
-            onClick={writeToFile}
-          >
-            <label className="p-4 font-bold"> Yellow </label>
-          </button>
+      {/*
+        <div className="flex absolute bottom-0 left-0 right-0 top-0 -z-30 bg-slate-600"></div>
+      */}
 
-          <button
-            className=" mx-4 border-2 my-4 border-black rounded-md drop-shadow-md transition-all hover:-translate-y-0.5 active:translate-y-0 active:border-red-600 active:bg-red-100"
-            onClick={writeToFile}
-          >
-            <label className="p-4 font-bold"> Red </label>
-          </button>
-        </div>
-      </main>
+      <div className="flex bg-slate-600">
+        <main className="flex mx-auto mt-20 w-4/6 h-screen justify-center bg-white">
+          <div className="flex flex-col my-auto w-full overflow-hidden">
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+            <div className="flex h-40 mx-3 my-5 justify-center bg-blue-600">
+              <p>useless</p>
+            </div>
+          </div>
+        </main>
+      </div>
     </>
   );
 }
