@@ -1,10 +1,9 @@
 import fs from "fs";
-import path from "path";
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-const filePath = path.resolve("../../data/storage.json");
+import posts from "../../data/posts.json";
 
 type Data = {
   message: string;
@@ -15,6 +14,7 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   if (req.method === "GET") {
+    fs.writeFileSync("data/posts.json", JSON.stringify({ nome: "meme" }));
     res.status(200).json({ message: "This is a GET request" });
   } else if (req.method === "POST") {
     res.status(200).json({ message: "This is a POST request" });
