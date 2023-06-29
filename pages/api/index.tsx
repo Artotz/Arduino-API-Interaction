@@ -9,14 +9,12 @@ type Data = {
   message: string;
 };
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     fs.writeFileSync("data/posts.json", JSON.stringify({ nome: "meme" }));
-    res.status(200).json({ message: "This is a GET request" });
+    res.status(200).json(posts);
   } else if (req.method === "POST") {
+    fs.writeFileSync("data/posts.json", JSON.stringify({ nome: "meme" }));
     res.status(200).json({ message: "This is a POST request" });
   } else {
     res.status(405).json({ message: "Method Not Allowed" });
