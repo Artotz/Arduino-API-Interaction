@@ -33,7 +33,7 @@ export default function Home() {
         <ul className="flex flex-row w-full h-fit justify-around items-center">
           <li className="flex w-fit h-fit px-3 py-1">
             <a className="flex text-4xl select-none transition-all hover:-translate-y-1">
-              🐵
+              😀
             </a>
           </li>
           <li className="flex w-fit h-fit px-3 py-1">
@@ -43,7 +43,7 @@ export default function Home() {
           </li>
           <li className="flex w-fit h-fit px-3 py-1">
             <a className="flex text-4xl select-none transition-all hover:-translate-y-1">
-              ✍🏿
+              ✍
             </a>
           </li>
           <li className="flex w-fit h-fit px-3 py-1">
