@@ -47,10 +47,7 @@ export default function Home() {
             </a>
           </li>
           <li className="flex w-fit h-fit px-3 py-1">
-            <a
-              className="flex text-4xl select-none transition-all hover:-translate-y-1"
-              href="https://cdn.discordapp.com/attachments/220733806011744267/1120030948524838974/SPOILER_unknown.png"
-            >
+            <a className="flex text-4xl select-none transition-all hover:-translate-y-1">
               ❓
             </a>
           </li>
