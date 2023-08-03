@@ -3,25 +3,25 @@ import Image from "next/image";
 import { useState } from "react";
 
 // pages/MyComponent.js
-import { useQuery } from "react-query";
+//import { useQuery } from "react-query";
 import axios from "axios";
 
-const fetchMyData = async () => {
-  const { data } = await axios.get("/api");
-  return data;
-};
+// const fetchMyData = async () => {
+//   const { data } = await axios.get("/api");
+//   return data;
+// };
 
 export default function Home() {
   const [toggle, setToggle] = useState(false);
-  const { data, isLoading, isError } = useQuery("myData", fetchMyData);
+  //const { data, isLoading, isError } = useQuery("myData", fetchMyData);
 
   // if (isLoading) {
   //   return <p>Loading...</p>;
   // }
 
-  if (isError) {
-    return <p>Error occurred while fetching data</p>;
-  }
+  // if (isError) {
+  //   return <p>Error occurred while fetching data</p>;
+  // }
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function Home() {
 
       <div className="flex min-h-screen bg-slate-600">
         <main className="flex mx-auto mt-[84px] mb-4 w-4/6 min-h-full justify-center shadow-md shadow-black rounded-3xl border-2 border-black bg-white">
-          {isLoading ? (
+          {false ? (
             <p>loading...</p>
           ) : (
             <div className="flex flex-col w-full">
